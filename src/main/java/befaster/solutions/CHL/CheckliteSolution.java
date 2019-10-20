@@ -3,7 +3,14 @@ package befaster.solutions.CHL;
 import befaster.runner.SolutionNotImplementedException;
 
 public class CheckliteSolution {
+
     public Integer checklite(String skus) {
-        throw new SolutionNotImplementedException();
+
+        if (skus == null) {
+            return -1;
+        }
+
+
     }
 }
+
