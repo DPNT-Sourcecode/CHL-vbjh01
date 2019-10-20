@@ -9,13 +9,13 @@ public class CheckliteSolution {
 
     public Integer checklite(String skus) {
 
-        Map<String, Integer> itemPriceMap = new HashMap<>();
-        itemPriceMap.put("A", 50);
-        itemPriceMap.put("B", 30);
-        itemPriceMap.put("C", 20);
-        itemPriceMap.put("D", 15);
+        Map<Character, Integer> itemPriceMap = new HashMap<>();
+        itemPriceMap.put('A', 50);
+        itemPriceMap.put('B', 30);
+        itemPriceMap.put('C', 20);
+        itemPriceMap.put('D', 15);
 
-        Map<String, Integer> itemCount = new HashMap<>();
+        Map<Character, Integer> itemCount = new HashMap<>();
 
         int cost = 0;
 
@@ -23,25 +23,21 @@ public class CheckliteSolution {
             return -1;
         }
 
-        if (skus.length() == 1 && !skus.contains(",")) {
-            return itemPriceMap.get(skus);
+        for (int i = 0; i < skus.length(); i++) {
+            int count = itemCount.getOrDefault(skus.charAt(i), 0) + 1;
+
+            itemCount.put(skus.charAt(i), count);
         }
 
-        for (String str : skus.split(",")) {
-            int count = itemCount.getOrDefault(str, 0) + 1;
-
-            itemCount.put(str, count);
-        }
-
-        for (Map.Entry<String, Integer> items : itemCount.entrySet()) {
-            String item = items.getKey();
+        for (Map.Entry<Character, Integer> items : itemCount.entrySet()) {
+            Character item = items.getKey();
             Integer count = items.getValue();
 
             Integer itemPrice = itemPriceMap.get(item);
 
-            if (item.equals("A") && count == 3) {
+            if (item.equals('A') && count == 3) {
                 cost += 130;
-            } else if (item.equals("B") && count == 2) {
+            } else if (item.equals('B') && count == 2) {
                 cost += 45;
             } else {
                 cost += (itemPrice * cost);
@@ -52,5 +48,6 @@ public class CheckliteSolution {
         return cost;
     }
 }
+
 
 
