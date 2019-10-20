@@ -26,6 +26,7 @@ public class CheckliteSolutionTest {
 
         Assert.assertNotNull(checkliteSolution.checklite("B,B"));
         Assert.assertEquals(checkliteSolution.checklite("B,B").intValue(), 45);
+        Assert.assertNotEquals(checkliteSolution.checklite("B,B").intValue(), 130);
     }
 
     @Test
@@ -40,7 +41,3 @@ public class CheckliteSolutionTest {
         Assert.assertEquals(checkliteSolution.checklite("A,B,C,D").intValue(), 115);
     }
 }
-
-
-
-
