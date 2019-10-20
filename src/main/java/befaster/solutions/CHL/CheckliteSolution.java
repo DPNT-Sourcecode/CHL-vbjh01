@@ -40,7 +40,7 @@ public class CheckliteSolution {
             } else if (item.equals('B') && count == 2) {
                 cost += 45;
             } else {
-                cost += (itemPrice * cost);
+                cost += (itemPrice * count);
             }
 
         }
@@ -48,6 +48,7 @@ public class CheckliteSolution {
         return cost;
     }
 }
+
 
 
 
