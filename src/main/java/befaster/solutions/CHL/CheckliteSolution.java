@@ -9,6 +9,10 @@ public class CheckliteSolution {
 
     public Integer checklite(String skus) {
 
+        if (skus == null) {
+            return -1;
+        }
+
        if (skus.isEmpty()) {
            return -1;
        }
@@ -48,3 +52,4 @@ public class CheckliteSolution {
         return cost;
     }
 }
+
