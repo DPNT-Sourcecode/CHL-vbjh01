@@ -13,6 +13,10 @@ public class CheckliteSolution {
             return -1;
         }
 
+        if (skus.isEmpty()) {
+            return -1;
+        }
+
         Map<Character, Integer> itemPriceMap = new HashMap<>();
         itemPriceMap.put('A', 50);
         itemPriceMap.put('B', 30);
@@ -25,6 +29,10 @@ public class CheckliteSolution {
 
         for (int i = 0; i < skus.length(); i++) {
 
+            if (!itemPriceMap.containsKey(skus.charAt(i))) {
+                return -1;
+            }
+
             int count = itemCount.getOrDefault(skus.charAt(i), 0) + 1;
 
             itemCount.put(skus.charAt(i), count);
@@ -33,10 +41,6 @@ public class CheckliteSolution {
         for (Map.Entry<Character, Integer> items : itemCount.entrySet()) {
             Character item = items.getKey();
             int count = items.getValue();
-
-            if (!itemPriceMap.containsKey(item)) {
-                return -1;
-            }
 
             int itemPrice = itemPriceMap.get(item);
 
@@ -53,4 +57,5 @@ public class CheckliteSolution {
         return cost;
     }
 }
+
 
