@@ -17,16 +17,16 @@ public class CheckliteSolutionTest {
     @Test
     public void checkliteSolutionWith3UnistofA() {
 
-        Assert.assertNotNull(checkliteSolution.checklite("A,A,A"));
-        Assert.assertEquals(checkliteSolution.checklite("A,A,A").intValue(), 130);
+        Assert.assertNotNull(checkliteSolution.checklite("AAA"));
+        Assert.assertEquals(checkliteSolution.checklite("AAA").intValue(), 130);
     }
 
     @Test
     public void checkliteSolutionWith3UnistofB() {
 
-        Assert.assertNotNull(checkliteSolution.checklite("B,B"));
-        Assert.assertEquals(checkliteSolution.checklite("B,B").intValue(), 45);
-        Assert.assertNotEquals(checkliteSolution.checklite("B,B").intValue(), 130);
+        Assert.assertNotNull(checkliteSolution.checklite("BB"));
+        Assert.assertEquals(checkliteSolution.checklite("BB").intValue(), 45);
+        Assert.assertNotEquals(checkliteSolution.checklite("BB").intValue(), 130);
     }
 
     @Test
@@ -38,7 +38,7 @@ public class CheckliteSolutionTest {
     @Test
     public void checkliteSolutionWithAllItems() {
 
-        Assert.assertEquals(checkliteSolution.checklite("A,B,C,D").intValue(), 115);
+        Assert.assertEquals(checkliteSolution.checklite("ABCD").intValue(), 115);
     }
 
     @Test
@@ -50,4 +50,5 @@ public class CheckliteSolutionTest {
         Assert.assertEquals(checkliteSolution.checklite("D").intValue(), 15);
     }
 }
+
 

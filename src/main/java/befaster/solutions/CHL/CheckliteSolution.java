@@ -9,6 +9,10 @@ public class CheckliteSolution {
 
     public Integer checklite(String skus) {
 
+       if (skus.isEmpty()) {
+           return -1;
+       }
+
         Map<Character, Integer> itemPriceMap = new HashMap<>();
         itemPriceMap.put('A', 50);
         itemPriceMap.put('B', 30);
@@ -18,10 +22,6 @@ public class CheckliteSolution {
         Map<Character, Integer> itemCount = new HashMap<>();
 
         int cost = 0;
-
-        if (skus == null || skus.isEmpty()) {
-            return -1;
-        }
 
         for (int i = 0; i < skus.length(); i++) {
             int count = itemCount.getOrDefault(skus.charAt(i), 0) + 1;
@@ -48,6 +48,7 @@ public class CheckliteSolution {
         return cost;
     }
 }
+
 
 
 
