@@ -40,4 +40,14 @@ public class CheckliteSolutionTest {
 
         Assert.assertEquals(checkliteSolution.checklite("A,B,C,D").intValue(), 115);
     }
+
+    @Test
+    public void checkliteSolutionSingleItems() {
+
+        Assert.assertEquals(checkliteSolution.checklite("A").intValue(), 50);
+        Assert.assertEquals(checkliteSolution.checklite("B").intValue(), 30);
+        Assert.assertEquals(checkliteSolution.checklite("C").intValue(), 20);
+        Assert.assertEquals(checkliteSolution.checklite("D").intValue(), 15);
+    }
 }
+
