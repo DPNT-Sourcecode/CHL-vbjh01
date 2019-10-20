@@ -20,7 +20,3 @@ public class HelloSolutionTest {
         Assert.assertNotEquals(hello.hello("Henry"), "Hello, World!");
     }
 }
-
-
-
-
