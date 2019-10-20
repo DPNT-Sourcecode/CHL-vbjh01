@@ -18,7 +18,21 @@ public class CheckliteSolutionTest {
     public void checkliteSolutionWith3UnistofA() {
 
         Assert.assertNotNull(checkliteSolution.checklite("A,A,A"));
+        Assert.assertEquals(checkliteSolution.checklite("A,A,A").intValue(), 130);
+    }
+
+    @Test
+    public void checkliteSolutionWithEmptyString() {
+
+        Assert.assertEquals(checkliteSolution.checklite("").intValue(), -1);
+    }
+
+    @Test
+    public void checkliteSolutionWithAllItems() {
+
+        Assert.assertEquals(checkliteSolution.checklite("A,B,C,D").intValue(), 115);
     }
 }
+
 
 
