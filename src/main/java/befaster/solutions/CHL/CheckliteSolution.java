@@ -14,7 +14,7 @@ public class CheckliteSolution {
         }
 
        if (skus.isEmpty()) {
-           return 0;
+           return -1;
        }
 
         Map<Character, Integer> itemPriceMap = new HashMap<>();
@@ -57,6 +57,7 @@ public class CheckliteSolution {
         return cost;
     }
 }
+
 
 
 
