@@ -15,10 +15,10 @@ public class CheckliteSolutionTest {
     }
 
     @Test
-    public void printMessage() {
+    public void checkliteSolutionWith3UnistofA() {
 
-        Assert.assertEquals();
-        Assert.assertNotEquals();
+        Assert.assertNotNull(checkliteSolution.checklite("A,A,A"));
     }
 }
+
 

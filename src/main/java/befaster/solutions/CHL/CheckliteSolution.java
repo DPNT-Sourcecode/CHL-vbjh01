@@ -8,6 +8,7 @@ import java.util.Map;
 public class CheckliteSolution {
 
     public Integer checklite(String skus) {
+
         Map<String, Integer> itemPriceMap = new HashMap<>();
         itemPriceMap.put("A", 50);
         itemPriceMap.put("B", 30);
@@ -16,9 +17,9 @@ public class CheckliteSolution {
 
         Map<String, Integer> itemCount = new HashMap<>();
 
-        int price 
+        int cost = 0;
 
-        if (skus == null) {
+        if (skus == null || skus.length() < 1) {
             return -1;
         }
 
@@ -32,9 +33,21 @@ public class CheckliteSolution {
             String item = items.getKey();
             Integer count = items.getValue();
 
+            Integer itemPrice = itemPriceMap.get(item);
+
+            if (item.equals("A") && count == 3) {
+                cost = 130;
+            } else if (item.equals("B") && count == 2) {
+                cost = 45;
+            } else {
+                cost += (itemPrice * cost);
+            }
 
         }
+
+        return cost;
     }
 }
+
 
 
