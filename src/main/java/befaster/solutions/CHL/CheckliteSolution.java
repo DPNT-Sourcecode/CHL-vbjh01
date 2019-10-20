@@ -31,14 +31,14 @@ public class CheckliteSolution {
 
         for (Map.Entry<Character, Integer> items : itemCount.entrySet()) {
             Character item = items.getKey();
-            Integer count = items.getValue();
+            int count = items.getValue();
 
-            Integer itemPrice = itemPriceMap.get(item);
+            int itemPrice = itemPriceMap.get(item);
 
             if (item.equals('A') && count == 3) {
-                cost = 130;
+                cost += 130;
             } else if (item.equals('B') && count == 2) {
-                cost = 45;
+                cost += 45;
             } else {
                 cost += (itemPrice * count);
             }
@@ -48,10 +48,3 @@ public class CheckliteSolution {
         return cost;
     }
 }
-
-
-
-
-
-
-

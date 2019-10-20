@@ -50,5 +50,3 @@ public class CheckliteSolutionTest {
         Assert.assertEquals(checkliteSolution.checklite("D").intValue(), 15);
     }
 }
-
-
