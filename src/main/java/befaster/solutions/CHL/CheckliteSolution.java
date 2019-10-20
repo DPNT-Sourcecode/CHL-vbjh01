@@ -28,6 +28,11 @@ public class CheckliteSolution {
         int cost = 0;
 
         for (int i = 0; i < skus.length(); i++) {
+
+            if (!itemPriceMap.containsKey(skus.charAt(i))) {
+                continue;
+            }
+
             int count = itemCount.getOrDefault(skus.charAt(i), 0) + 1;
 
             itemCount.put(skus.charAt(i), count);
@@ -52,4 +57,5 @@ public class CheckliteSolution {
         return cost;
     }
 }
+
 
