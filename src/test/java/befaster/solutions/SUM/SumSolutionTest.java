@@ -1,5 +1,6 @@
 package befaster.solutions.SUM;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -20,3 +21,4 @@ public class SumSolutionTest {
         assertThat(sum.compute(1, 1), equalTo(2));
     }
 }
+
