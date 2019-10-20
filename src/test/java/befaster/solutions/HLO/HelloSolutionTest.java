@@ -1,16 +1,24 @@
 package befaster.solutions.HLO;
 
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
 public class HelloSolutionTest {
+    private HelloSolution hello;
 
     @Before
     public void setUp() {
 
-        sum = new SumSolution();
+        hello = new HelloSolution();
     }
 
     @Test
-    public void compute_sum() {
-        assertThat(sum.compute(1, 1), equalTo(2));
+    public void printMessage() {
+
+        Assert.assertEquals(hello.hello("Jermaine"), "Hello Jermaine");
+        Assert.assertNotEquals(hello.hello("Henry"), "Hello Jermaine");
     }
 }
+
 
