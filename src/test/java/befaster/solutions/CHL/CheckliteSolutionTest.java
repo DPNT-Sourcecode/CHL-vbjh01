@@ -6,18 +6,19 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class CheckliteSolutionTest {
-    private HelloSolution hello;
+    private CheckliteSolution checkliteSolution;
 
     @Before
     public void setUp() {
 
-        hello = new HelloSolution();
+        checkliteSolution = new CheckliteSolution();
     }
 
     @Test
     public void printMessage() {
 
-        Assert.assertEquals(hello.hello("Jermaine"), "Hello, Jermaine!");
-        Assert.assertNotEquals(hello.hello("Henry"), "Hello, World!");
+        Assert.assertEquals();
+        Assert.assertNotEquals();
     }
 }
+
