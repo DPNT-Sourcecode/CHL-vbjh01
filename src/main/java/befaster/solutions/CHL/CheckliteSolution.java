@@ -30,7 +30,7 @@ public class CheckliteSolution {
         for (int i = 0; i < skus.length(); i++) {
 
             if (!itemPriceMap.containsKey(skus.charAt(i))) {
-                return -1;
+                continue;
             }
 
             int count = itemCount.getOrDefault(skus.charAt(i), 0) + 1;
@@ -57,6 +57,7 @@ public class CheckliteSolution {
         return cost;
     }
 }
+
 
 
 
