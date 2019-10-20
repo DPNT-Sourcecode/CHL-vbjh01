@@ -19,7 +19,7 @@ public class CheckliteSolution {
 
         int cost = 0;
 
-        if (skus == null) {
+        if (skus == null || skus.isEmpty()) {
             return -1;
         }
 
@@ -48,6 +48,7 @@ public class CheckliteSolution {
         return cost;
     }
 }
+
 
 
 
