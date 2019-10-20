@@ -13,10 +13,6 @@ public class CheckliteSolution {
             return -1;
         }
 
-       if (skus.isEmpty()) {
-           return -1;
-       }
-
         Map<Character, Integer> itemPriceMap = new HashMap<>();
         itemPriceMap.put('A', 50);
         itemPriceMap.put('B', 30);
@@ -44,10 +40,10 @@ public class CheckliteSolution {
 
             int itemPrice = itemPriceMap.get(item);
 
-            if (item.equals('A') && count == 3) {
-                cost += 130;
-            } else if (item.equals('B') && count == 2) {
-                cost += 45;
+            if (item.equals('A') && count >= 3) {
+                cost += (130 * (count/3));
+            } else if (item.equals('B') && count >= 2) {
+                cost += (45 * (count/2));
             } else {
                 cost += (itemPrice * count);
             }
@@ -57,6 +53,7 @@ public class CheckliteSolution {
         return cost;
     }
 }
+
 
 
 
