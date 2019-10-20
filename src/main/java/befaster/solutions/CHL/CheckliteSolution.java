@@ -36,9 +36,9 @@ public class CheckliteSolution {
             Integer itemPrice = itemPriceMap.get(item);
 
             if (item.equals("A") && count == 3) {
-                cost = 130;
+                cost += 130;
             } else if (item.equals("B") && count == 2) {
-                cost = 45;
+                cost += 45;
             } else {
                 cost += (itemPrice * cost);
             }
@@ -48,6 +48,7 @@ public class CheckliteSolution {
         return cost;
     }
 }
+
 
 
 
