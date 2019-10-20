@@ -23,6 +23,10 @@ public class CheckliteSolution {
             return -1;
         }
 
+        if (skus.length() == 1 && !skus.contains(",")) {
+            return itemPriceMap.get(skus);
+        }
+
         for (String str : skus.split(",")) {
             int count = itemCount.getOrDefault(str, 0) + 1;
 
@@ -48,4 +52,5 @@ public class CheckliteSolution {
         return cost;
     }
 }
+
 
